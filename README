@@ -1,6 +1,22 @@
 USB downloader and USB second stage bootloader for OMAP44xx
 ===========================================================
 
+Pandaboard ES Notes
+-------------------
+
+With SD card and 5V power supply removed, plug in mini-USB cable to USB-OTG port
+(@J18) to enter omap usb boot mode. Your computer should recognize the device as
+`0451:d010 Texas Instruments, Inc. OMAP4440`. This device may disconnect and
+reconnect every few seconds (this is normal behavior). While in this mode, use
+the usbboot utility to load 2ndstage and 3rdstage images.
+
+If your computer has trouble recognizing the device as OMAP4440, try another
+mini-USB cable.
+
+If encountering errors with usbboot, try a different USB port on the same
+machine or on another machine. usbboot is not very reliable and may require
+multiple attempts.
+
 aboot.bin
 ---------
 
